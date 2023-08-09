@@ -29,12 +29,10 @@ dicom_preprocess.save_as('./dicom_preprocess.dcm')
 import pydicom, numpy as np
 import matplotlib.pylab as plt
 import os
-import pickle
 import scipy.ndimage as ndi
 import math
 import cv2
 from skimage import morphology
-import pydicom as dicom
 
 def transform_to_hu(img, intercept, slope):
     """Transform raw pixel values in CT scans to the Hounsfield Units (HU)

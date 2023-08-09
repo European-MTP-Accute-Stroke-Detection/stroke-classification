@@ -1,4 +1,6 @@
 """
+Author: Eunmi Joo
+
 Data Pipeline
 
 Load RSNA, AISD dataset (dicom format, patient-wise)

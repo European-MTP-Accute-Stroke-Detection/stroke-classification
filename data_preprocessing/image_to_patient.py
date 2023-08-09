@@ -1,4 +1,6 @@
 """
+Author: Eunmi Joo
+
 Build Patient-wise Dataset (dictionary)
 
 Key for patient: "PatientID"_"StudyInstanceUID" (same patient could have different caseid)
