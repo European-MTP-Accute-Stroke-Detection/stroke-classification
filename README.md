@@ -24,10 +24,11 @@ Stroke classification for accurate brain stroke detection software that can supp
 	- 'balance_data.ipynb': balance the data volume to handle data imbalance
 	- 'data_preprocess.py': functions for data preprocessing
 	- 'data_pipeline.py': run data preprocessing and augmentation
-	- 'compute_cnn.py': compute multi-layer images into CNN features with fine-tuned CNN model
+	- 'compute_image_feature.py': compute multi-layer images into features with fine-tuned image-level model
 	
 - `model/`: Implementation of the stroke type classifier model architecture.
-	- 'model_cnn_tranformer_hp.ipynb': patient-wise stroke type classifier model implementation - Transformer Architecture
+	- 'patient_classifier_transformer.py': patient-wise stroke type classifier model implementation - Transformer Architecture
+   	- 'model_selection.ipynb': model selection scripts - hyperparameter optimization
 
 - `requirements.txt`: List of required Python libraries.
 - `LICENSE`: Information about the open-source license.
