@@ -22,8 +22,15 @@ Briefly explain the purpose and importance of the Stroke Type Classifier model. 
 Explain the organization of your repository, detailing the purpose of each directory and important files. For example:
 
 - `data_preprocessing/`: Code for data preprocessing and augmentation.
+	'image_to_patient.py': build patient-wise dataset
+	'balance_data.ipynb': balance the data volume to handle data imbalance
+	'data_preprocess.py': functions for data preprocessing
+	'data_pipeline.py': run data preprocessing and augmentation
+	'compute_cnn.py': compute multi-layer images into CNN features with fine-tuned CNN model
+	
 - `model/`: Implementation of the stroke type classifier model architecture.
-- `training/`: Script for model training.
+	'model_cnn_tranformer_hp.ipynb': patient-wise stroke type classifier model implementation - Transformer Architecture
+
 - `requirements.txt`: List of required Python libraries.
 - `LICENSE`: Information about the open-source license.
 - `README.md`: The document you are currently reading.
