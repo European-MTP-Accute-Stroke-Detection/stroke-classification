@@ -1,8 +1,8 @@
 # Stroke Type Classifier Model Implementation
 
-![Model Architecture](./assets/model_architecture.png)
-
 This repository contains the implementation code for a Stroke Type Classifier model. The model is designed to classify different types of strokes based on medical imaging data, such as MRI or CT scans. Accurate classification of stroke types is crucial for timely and effective medical intervention.
+
+![Model Architecture](./assets/model_architecture.png)
 
 ## Table of Contents
 
@@ -15,21 +15,19 @@ This repository contains the implementation code for a Stroke Type Classifier mo
 
 ## <a name="introduction"></a>Introduction
 
-Briefly explain the purpose and importance of the Stroke Type Classifier model. Highlight its potential impact on medical diagnosis and patient care.
+Stroke classification for accurate brain stroke detection software that can support medical practitioners in diagnosis of stroke in patients.
 
 ## <a name="repository-structure"></a>Repository Structure
 
-Explain the organization of your repository, detailing the purpose of each directory and important files. For example:
-
 - `data_preprocessing/`: Code for data preprocessing and augmentation.
-	'image_to_patient.py': build patient-wise dataset
-	'balance_data.ipynb': balance the data volume to handle data imbalance
-	'data_preprocess.py': functions for data preprocessing
-	'data_pipeline.py': run data preprocessing and augmentation
-	'compute_cnn.py': compute multi-layer images into CNN features with fine-tuned CNN model
+	- 'image_to_patient.py': build patient-wise dataset
+	- 'balance_data.ipynb': balance the data volume to handle data imbalance
+	- 'data_preprocess.py': functions for data preprocessing
+	- 'data_pipeline.py': run data preprocessing and augmentation
+	- 'compute_cnn.py': compute multi-layer images into CNN features with fine-tuned CNN model
 	
 - `model/`: Implementation of the stroke type classifier model architecture.
-	'model_cnn_tranformer_hp.ipynb': patient-wise stroke type classifier model implementation - Transformer Architecture
+	- 'model_cnn_tranformer_hp.ipynb': patient-wise stroke type classifier model implementation - Transformer Architecture
 
 - `requirements.txt`: List of required Python libraries.
 - `LICENSE`: Information about the open-source license.
