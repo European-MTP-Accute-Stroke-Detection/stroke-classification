@@ -24,7 +24,6 @@ import torch
 import os
 device = "cuda:6" if torch.cuda.is_available() else "cpu"
 torch.cuda.set_device(device)
-from ray.tune.schedulers import ASHAScheduler
 import seaborn as sns
 import pickle
 import numpy as np

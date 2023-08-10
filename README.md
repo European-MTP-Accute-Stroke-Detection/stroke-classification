@@ -1,6 +1,6 @@
-# Stroke Type Classifier Model Implementation
+# Stroke Classifier Model Implementation
 
-This repository contains the implementation code for a Stroke Type Classifier model. The model is designed to classify different types of strokes based on medical imaging data, such as MRI or CT scans. Accurate classification of stroke types is crucial for timely and effective medical intervention.
+This repository contains the code implementation for the Stroke Type Classifier model. The model's purpose is to accurately classify stroke types using medical imaging data, particularly CT scans. Precise stroke classification is crucial for prompt and efficient medical responses. The model architecture follows a two-step process: initially, an image-level classifier extracts features from individual CT scans, and subsequently, the sequence of these features is fed into a patient-level classifier for the final output.
 
 ![Model Architecture](./assets/model_architecture.png)
 
@@ -15,7 +15,7 @@ This repository contains the implementation code for a Stroke Type Classifier mo
 
 ## <a name="introduction"></a>Introduction
 
-Stroke classification for accurate brain stroke detection software that can support medical practitioners in diagnosis of stroke in patients.
+AI model designed for acute stroke detection to assist medical professionals in diagnosing strokes in patients, offering valuable support for implementation in a Mobile Stroke Unit.
 
 ## <a name="repository-structure"></a>Repository Structure
 
@@ -28,7 +28,31 @@ Stroke classification for accurate brain stroke detection software that can supp
 	
 - `model/`: Implementation of the stroke type classifier model architecture.
 	- 'patient_classifier_transformer.py': patient-wise stroke type classifier model implementation - Transformer Architecture
-   	- 'model_selection.ipynb': model selection scripts - hyperparameter optimization
+   	- 'model_selection.ipynb': model selection scripts - hyperparameter optimization for transformer model
+	- 'img_model_hparam.py': Hyperparameter tuning for image level classifier
+	- 'GRU_hparam.ipynb': Hyperparameter tuning for GRU model for patient level classifier
+	- 'train_img_classification.py': Script for training image level classifier model
+	- 'train_patient_classification.py': Script for training patient level classifier model(RNN based model)
+	- The file structure of this repo is only partial due to data size. Below is an example version of original structure.
+	```
+	Model/
+	│   ├── train_img_classification.py
+	│   ├── train_patient_classification.py
+	│   ├── img_model_hparam.py
+	│   ├── GRU_hparam.ipynb
+	│   ├── model_selection.ipynb
+	│   ├── patient_classifier_transformer.py
+	│   ├── data/
+	│   │   ├── 14k_preprocessed_excl_scale/
+	│   │   │   ├── X.pickle
+	│   │   │   ├── y.pickle
+	│   │   ├── 14k_preprocessed/
+	│   │   │   ├── X.pickle
+	│   │   │   ├── y.pickle
+	│   │   ├── patientwise/
+	│   │   │   ├── patient_data_combine.pickle	
+	```
+
 
 - `requirements.txt`: List of required Python libraries.
 - `LICENSE`: Information about the open-source license.
@@ -60,10 +84,15 @@ Data Preprocessing to gain more consistent input for the model despite of differ
 
 We implemented image-level classifier and patient-level classifier.
 
-- Image-level Classifier: classify stroke type of one brain CT scan.
-- Patient-level Classifier: classify stroke type of one patient based on the whole brain CT scans of the patient.
+- Image-level Classifier: Classify stroke type of a single brain CT scan.
+- Patient-level Classifier: Classify the stroke type for an individual patient by analyzing a sequence of brain CT scans belonging to that patient.
 
-### Patient-level Classifier Architecture
+### Image-level Classifier
+We have implemented an image-level classifier using transfer learning. We extensively explored various families of models, and below are the results of the better performing models, along with a detailed analysis of the best performing model, which is the ViT-L-16.
+
+![Img level result](./assets/img_level_result.png)
+![vit result](./assets/vit_result.png)
+### Patient-level Classifier
 
 We implemented patient-level stroke classifier in two different approaches - RNN and Transformer.
 
@@ -71,7 +100,7 @@ We implemented patient-level stroke classifier in two different approaches - RNN
 
 ![RNN Architecture](./assets/rnn_architecture.png)
 ![RNN Result](./assets/rnn_result.png)
-
+- Vit-Rnn model also showed almost identical result
 ### Transformer
 
 ![Transformer Architecture](./assets/transformer_architecture.png)
