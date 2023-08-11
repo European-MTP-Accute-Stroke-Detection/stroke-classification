@@ -52,7 +52,26 @@ AI model designed for acute stroke detection to assist medical professionals in 
 	│   │   │   ├── X.pickle
 	│   │   │   ├── y.pickle
 	│   │   ├── patientwise/
-	│   │   │   ├── patient_data_combine.pickle	
+	│   │   │   ├── patient_data_combine.pickle
+ 	│   ├── imagewise_models/
+	│   │   ├── 14k_excl_scale/
+ 	|   │   │   ├── vit_l_16.ckpt
+ 	│   │   ├── full_preprocess_14k/
+ 	|   │   │   ├── vit_l_16.ckpt
+ 	|   │   │   ├── ...
+  	│   ├── imagewise_models_state_dict/
+	│   │   ├── 14k_excl_scale/
+ 	|   │   │   ├── vit_l_16.ckpt
+ 	│   │   ├── full_preprocess_14k/
+ 	|   │   │   ├── vit_l_16.ckpt
+ 	|   │   │   ├── ...
+  	│   ├── patientwise_models/
+	│   │   ├── resnet152_rnn.ckpt
+ 	│   │   ├── vit_l_16_rnn.ckpt
+   	│   ├── patientwise_models_state_dict/
+	│   │   ├── resnet152_rnn.ckpt
+ 	│   │   ├── vit_l_16_rnn.ckpt
+ 	...
 	```
 
 
