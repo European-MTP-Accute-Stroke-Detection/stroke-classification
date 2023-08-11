@@ -68,7 +68,7 @@ AI model designed for acute stroke detection to assist medical professionals in 
   	│   ├── patientwise_models/
 	│   │   ├── resnet152_rnn.ckpt
  	│   │   ├── vit_l_16_rnn.ckpt
-   	│   ├── patientwise_models_state_dict/
+ 	│   ├── patientwise_models_state_dict/
 	│   │   ├── resnet152_rnn.ckpt
  	│   │   ├── vit_l_16_rnn.ckpt
  	...
