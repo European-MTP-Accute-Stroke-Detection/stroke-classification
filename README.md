@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Stroke Classifier Model Implementation
 
 This repository contains the code implementation for the Stroke Type Classifier model. The model's purpose is to accurately classify stroke types using medical imaging data, particularly CT scans. Precise stroke classification is crucial for prompt and efficient medical responses. The model architecture follows a two-step process: initially, an image-level classifier extracts features from individual CT scans, and subsequently, the sequence of these features is fed into a patient-level classifier for the final output.
